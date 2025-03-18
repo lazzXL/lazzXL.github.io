@@ -8,6 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+
 /*
 maybe later
 const skillFilters = document.querySelectorAll('[data-skill-filter]');
