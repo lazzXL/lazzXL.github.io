@@ -165,7 +165,7 @@ function App() {
             ))}
             
             <div className="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02] animate-fade-in">
-              <h3 className="text-xl font-bold mb-4">Language Skills</h3>
+              <h3 className="text-xl font-bold mb-4">Language skills</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {languages.map((lang, index) => (
                   <div 
