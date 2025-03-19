@@ -1,5 +1,8 @@
 import './App.css';
 import Header from './components/Header';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 const languages = [{ language: "Portuguese", level: "Native", color: "bg-purple-100" },
 { language: "English", level: "C2 Proficient", color: "bg-purple-100" },
@@ -40,8 +43,18 @@ const education = [
   }
 ];
 
-
 function App() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <Header />

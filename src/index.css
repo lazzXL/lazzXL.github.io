@@ -15,6 +15,24 @@
   transition: width 0.3s ease;
 }
 
+/* In your index.css */
+html {
+  scroll-behavior: smooth;
+}
+
+.header-animation {
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .nav-link:hover::after {
   width: 100%;
 }
