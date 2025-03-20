@@ -2,46 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-
-const languages = [{ language: "Portuguese", level: "Native", color: "bg-purple-100" },
-{ language: "English", level: "C2 Proficient", color: "bg-purple-100" },
-{ language: "Spanish", level: "B2 Intermediate", color: "bg-purple-200" },
-{ language: "Italian", level: "B1 Intermediate", color: "bg-purple-200" },
-{ language: "German", level: "A1 Beginner", color: "bg-purple-300" } ];
-
-const bulletPointsExperience = ["Participated in intensive training programs", 
-    "Completed compulsory technical school internship",
-    "Engineered my own final project (PAP) with the technologies learned",
-    "Integrated MVC architecture solutions using Laravel and pure PHP"];
-
-const proficiencies = [
-    {
-      level: "Advanced",
-      items: ["JavaScript", "Kotlin", "C", "HTML", "PostgreSQL", "Node.js", "REST"]
-    },
-    {
-      level: "Intermediate",
-      items: ["Java", "Git", "React", "TypeScript", "Bootstrap", "MongoDB", "Tailwind CSS"]
-    },
-    {
-      level: "Basic",
-      items: ["Python", "C#", "Docker", "Linux", "MySQL"]
-    }
-];
-
-const education = [
-  {
-    title: "Computer Science and Engineering",
-    institution: "ISEL · 2022 - Current",
-    details: "EQF level 6"
-  },
-  {
-    title: "Technical High School Diploma",
-    institution: "Escola Bento Jesus de Caraça",
-    details: "Programming & IT Management · EQF level 4"
-  }
-];
+import { bulletPointsExperience, proficiencies, education, languages } from './sectionConstants';
+import { ColorProvider } from './colorPicker/ColorProvider';
 
 function App() {
   const { hash } = useLocation();
@@ -56,6 +18,7 @@ function App() {
   }, [hash]);
 
   return (
+    <ColorProvider>
     <div className="bg-gray-50 min-h-screen">
       <Header />
       <main className="container mx-auto px-4 py-8">
@@ -187,6 +150,7 @@ function App() {
         </section>
       </main>
     </div>
+    </ColorProvider>
   );
 }
 
