@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { ColorContext } from './colorContext';
 import { colors } from './colorConstants';
 
+
 export const ColorProvider = ({ children }) => {
-  const [themeColor, setThemeColor] = useState(() => {
-    const savedColor = localStorage.getItem('themeColor');
-    return savedColor || 'purple';
-  });
+    const [themeColor, setThemeColor] = useState(() => {
+        const savedColor = localStorage.getItem('themeColor');
+        return savedColor || 'purple';
+      });
+    
 
   const value = {
     themeColor: colors[themeColor],

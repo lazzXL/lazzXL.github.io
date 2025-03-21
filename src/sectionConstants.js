@@ -1,9 +1,10 @@
+const themeColor = localStorage.getItem('themeColor') || 'purple';
 
-export const languages = [{ language: "Portuguese", level: "Native", color: "bg-purple-100" },
-{ language: "English", level: "C2 Proficient", color: "bg-purple-100" },
-{ language: "Spanish", level: "B2 Intermediate", color: "bg-purple-200" },
-{ language: "Italian", level: "B1 Intermediate", color: "bg-purple-200" },
-{ language: "German", level: "A1 Beginner", color: "bg-purple-300" }];
+export const languages = [{ language: "Portuguese", level: "Native", color: `bg-${themeColor}-100` },
+{ language: "English", level: "C2 Proficient", color: `bg-${themeColor}-100` },
+{ language: "Spanish", level: "B2 Intermediate", color: `bg-${themeColor}-200` },
+{ language: "Italian", level: "B1 Intermediate", color: `bg-${themeColor}-200` },
+{ language: "German", level: "A1 Beginner", color: `bg-${themeColor}-300` }];
 
 export const bulletPointsExperience = ["Participated in intensive training programs",
   "Completed compulsory technical school internship",

@@ -59,7 +59,10 @@ function Header() {
               {availableColors.map((color) => (
                 <button
                   key={color}
-                  onClick={() => setThemeColor(color)}
+                  onClick={() => {
+                    setThemeColor(color)
+                    window.location.reload()
+                   }}
                   className={`w-8 h-8 rounded-full ${colors[color].primary} border-2 ${
                     themeColor.primary === colors[color].primary ? 'border-white' : 'border-transparent'
                   }`}
