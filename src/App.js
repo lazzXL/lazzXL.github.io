@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { bulletPointsExperience, proficiencies, education, languages } from './sectionConstants';
+import { bulletPointsFirstExperience, bulletPointsSecondExperience, proficiencies, education, languages } from './sectionConstants';
 import { ColorProvider } from './colorPicker/ColorProvider';
 
 const themeColor = localStorage.getItem('themeColor') || 'purple';
@@ -77,7 +77,17 @@ function App() {
             <p className={`text-${themeColor}-600 mb-2`}>Inovcorp · Lisbon, Portugal</p>
             <p className="text-sm text-gray-500 mb-2">Mid 2021 & Mid 2022 (3 months each)</p>
             <ul className="list-disc pl-5 space-y-2">
-              {bulletPointsExperience.map((item, index) => (
+              {bulletPointsFirstExperience.map((item, index) => (
+                <li key={index} className="transition-all duration-300 hover:translate-x-2">{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02] animate-fade-in">
+            <h3 className="text-xl font-bold">AI QA Analyst</h3>
+            <p className={`text-${themeColor}-600 mb-2`}>Outlier · Remote </p>
+            <p className="text-sm text-gray-500 mb-2">Feb 2025 - Currently</p>
+            <ul className="list-disc pl-5 space-y-2">
+              {bulletPointsSecondExperience.map((item, index) => (
                 <li key={index} className="transition-all duration-300 hover:translate-x-2">{item}</li>
               ))}
             </ul>
