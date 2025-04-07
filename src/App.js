@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { bulletPointsFirstExperience, bulletPointsSecondExperience, proficiencies, education, languages } from './sectionConstants';
 import { ColorProvider } from './colorPicker/ColorProvider';
 
+
 const themeColor = localStorage.getItem('themeColor') || 'purple';
 function App() {
   const { hash } = useLocation();
