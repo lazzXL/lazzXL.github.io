@@ -24,6 +24,18 @@ html {
   animation: slideDown 0.5s ease-out;
 }
 
+.color-picker-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-palette {
+  transition: transform 0.3s ease;
+}
+
+.fa-palette:hover {
+  transform: rotate(15deg);
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);

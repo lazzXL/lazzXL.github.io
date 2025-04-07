@@ -40,3 +40,4 @@ export const education = [
     details: "EQF level 4"
   }
 ];
+
